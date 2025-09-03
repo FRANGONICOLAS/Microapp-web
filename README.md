@@ -1,40 +1,19 @@
 # To Run application
 
-## Start and SSH into Vagrant VM 
+## Use this command to find mySQL port.  
 
 ```
-vagrant up
-vagrant ssh servidorWeb
+sudo lsof -i:3306
 ```
 
-## Run the webApp
+## Kill this process
 
 ```
-cd /home/vagrant/app/frontend
-export FLASK_APP=run.py
-/usr/local/bin/flask run --host=0.0.0.0 --port 5001
+sudo kill <PID>
 ```
 
-## Run the Users Microservice
+## Run this command to use docker compose.
 
 ```
-cd /home/vagrant/app/microUsers
-export FLASK_APP=run.py
-/usr/local/bin/flask run --host=0.0.0.0 --port 5002
-```
-
-## Run the Products Microservice
-
-```
-cd /home/vagrant/app/microProducts
-export FLASK_APP=run.py
-/usr/local/bin/flask run --host=0.0.0.0 --port 5003
-```
-
-## Run the Oders Microservice
-
-```
-cd /home/vagrant/app/microOrders
-export FLASK_APP=run.py
-/usr/local/bin/flask run --host=0.0.0.0 --port 5004
+docker compose up --build
 ```
