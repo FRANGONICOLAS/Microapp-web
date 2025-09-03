@@ -1,0 +1,6 @@
+Flask
+Flask_SQLAlchemy
+requests
+PyMySQL
+Flask-Cors
+cryptography
